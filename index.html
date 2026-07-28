@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위드어스건강관리협회</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', 'Noto Sans KR', sans-serif; }
+        body { color: #333; line-height: 1.6; background-color: #f8f9fa; }
+        a { text-decoration: none; color: inherit; }
 
+        /* 헤더 */
+        header { background: #ffffff; border-bottom: 1px solid #e5e5e5; position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { font-size: 1.4rem; font-weight: bold; color: #0066ff; display: flex; align-items: center; }
+        .logo img { height: 50px; width: auto; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #0066ff; }
+
+        /* 히어로 섹션 */
+        .hero { background: linear-gradient(135deg, #0052cc 0%, #0088ff 100%); color: white; text-align: center; padding: 6rem 2rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 700; }
+        .hero .sub-title { font-size: 1.5rem; font-weight: 400; opacity: 0.9; margin-bottom: 1.5rem; }
+        .hero .highlight { font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem; color: #ffe600; }
+        .hero .desc { font-size: 1.1rem; line-height: 1.8; opacity: 0.95; margin-bottom: 2rem; }
+        .hero-btn { display: inline-block; background: white; color: #0052cc; padding: 0.8rem 2rem; border-radius: 30px; font-weight: bold; transition: background 0.3s; margin: 0 5px; }
+        .hero-btn:hover { background: #f0f0f0; }
+
+        /* 본문 공통 */
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 3rem; color: #111; }
+
+        /* 실적 카운터 섹션 */
+        .stats-section { background: #ffffff; border-bottom: 1px solid #eee; }
+        .stat-card h2 { font-size: 2.5rem; color: #0066ff; margin-bottom: 0.5rem; }
+        .stat-card p { font-size: 1.1rem; font-weight: 600; color: #555; }
+
+        /* 주요 사업 (카드형) */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+        .card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .card h3 { font-size: 1.3rem; margin-bottom: 1rem; color: #222; }
+        .card p { color: #666; font-size: 0.95rem; }
+
+        /* 공지사항 테이블 */
+        .board { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .board-item { display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid #eee; }
+        .board-item:last-child { border-bottom: none; }
+        .board-date { color: #888; font-size: 0.9rem; }
+
+        /* 푸터 */
+        footer { background: #222; color: #aaa; padding: 3rem 2rem; font-size: 0.9rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+        .footer-info p { margin-bottom: 0.5rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero .sub-title { font-size: 1.1rem; }
+            .nav-links { display: none; }
+            .board-item { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 네비게이션 -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#">위드어스건강관리협회</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">협회소개</a></li>
+                <li><a href="#services">주요사업</a></li>
+                <li><a href="#notice">공지사항</a></li>
+                <li><a href="#contact">오시는길</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 메인 배너 -->
+    <section class="hero">
+        <h1>위드어스건강관리협회</h1>
+        <div class="sub-title">WITH US HEALTH CARE ASSOCIATION</div>
+        <p class="highlight">대한민국 건강관리의 새로운 기준</p>
+        <p class="desc">
+            스포츠건강관리지도사 교육기관<br>
+            건강증진 프로그램 운영<br>
+            기업 · 학교 · 공공기관 출강
+        </p>
+        <div style="margin-top: 2rem;">
+            <a href="#about" class="hero-btn">협회소개</a>
+            <a href="#services" class="hero-btn">교육프로그램</a>
+        </div>
+    </section>
+
+    <!-- 실적 데이터 요약 -->
+    <div class="stats-section">
+        <section style="padding: 3rem 2rem;">
+            <div class="grid">
+                <div class="card stat-card">
+                    <h2>16년</h2>
+                    <p>운동지도 경력</p>
+                </div>
+                <div class="card stat-card">
+                    <h2>1000+</h2>
+                    <p>교육생 수료</p>
+                </div>
+                <div class="card stat-card">
+                    <h2>50+</h2>
+                    <p>교육 프로그램</p>
+                </div>
+                <div class="card stat-card">
+                    <h2>100%</h2>
+                    <p>실무 중심 교육</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 협회소개 -->
+    <section id="about">
+        <h2 class="section-title">협회소개</h2>
+        <p style="text-align:center; font-size:1.2rem; max-width:800px; margin:auto; line-height:2; color:#444;">
+            위드어스건강관리협회는 국민의 건강증진과 전문 건강관리 지도자 양성을 목표로,<br>
+            <strong>스포츠건강관리지도사 교육, 기업 건강강의, 학교 출강, 장애인 및 노인 건강관리 프로그램</strong>을 전문적으로 운영하는 건강 전문기관입니다.
+        </p>
+    </section>
+
+    <!-- 주요 사업 -->
+    <section id="services" style="background:#f0f4f9; max-width:100%; padding: 5rem 2rem;">
+        <div style="max-width:1200px; margin:0 auto;">
+            <h2 class="section-title">주요 사업 안내</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🏥</div>
+                    <h3>건강 증진 교육</h3>
+                    <p>올바른 건강 관리 지식 보급 및 생애주기별 맞춤형 건강 교육 프로그램을 운영합니다.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>지역사회 봉사 & 출강</h3>
+                    <p>기업, 학교, 공공기관 및 사회적 취약계층을 위한 정기적인 건강 프로그램 및 출강을 진행합니다.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>전문 지도자 양성</h3>
+                    <p>체계적이고 실무 중심의 스포츠건강관리지도사 교육을 통해 현장 맞춤형 전문가를 양성합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 공지사항 -->
+    <section id="notice">
+        <h2 class="section-title">최신 소식 & 공지사항</h2>
+        <div class="board">
+            <div class="board-item">
+                <span>[공지] 위드어스건강관리협회 공식 홈페이지가 오픈되었습니다.</span>
+                <span class="board-date">2026.07.28</span>
+            </div>
+            <div class="board-item">
+                <span>[안내] 2026년도 하반기 스포츠건강관리지도사 교육 과정 안내</span>
+                <span class="board-date">2026.07.20</span>
+            </div>
+            <div class="board-item">
+                <span>[소식] 기업 및 공공기관 맞춤형 건강증진 프로그램 신청 안내</span>
+                <span class="board-date">2026.07.15</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 하단 정보 -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3 style="color: white; margin-bottom: 1rem;">위드어스건강관리협회</h3>
+                <p>대표자: 박민정 | 사업자등록번호: 223-80-11140</p>
+                <p>주소: 서울특별시 서초구 사임당로 158, 래미안리더스원상가 4층</p>
+                <p>대표전화: 010-6747-1687 | 이메일: withus-health@naver.com</p>
+                <p style="margin-top: 1rem; color: #666;">© 2026 With Us Health Care Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
