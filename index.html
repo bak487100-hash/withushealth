@@ -13,14 +13,26 @@
         /* 헤더 */
         header { background: #ffffff; border-bottom: 1px solid #e5e5e5; position: sticky; top: 0; z-index: 1000; }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
-        .logo { font-size: 1.4rem; font-weight: bold; color: #1776B4D; display: flex; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: bold; color: #176B4D; display: flex; align-items: center; }
         .logo img { height: 50px; width: auto; }
+        .logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #176B4D;
+    white-space: nowrap;
+}
         .nav-links { display: flex; list-style: none; gap: 2rem; }
         .nav-links a { font-weight: 500; transition: color 0.3s; }
         .nav-links a:hover { color: #176B4D; }
 
         /* 히어로 섹션 */
-        .hero { background: linear-gradient(135deg, #176B4D 0%, #6BBF59 100%)); color: white; text-align: center; padding: 6rem 2rem; }
+        .hero { background: linear-gradient(135deg, #176B4D 0%, #6BBF59 100%); color: white; text-align: center; padding: 6rem 2rem; }
         .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 700; }
         .hero .sub-title { font-size: 1.5rem; font-weight: 400; opacity: 0.9; margin-bottom: 1.5rem; }
         .hero .highlight { font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem; color: #ffe600; }
